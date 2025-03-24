@@ -1,32 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nurullah Patwary | Personal Site</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Directive by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="html5up-directive/assets/css/main.css" />
   </head>
-  <body>
-    <header>
-      <nav>
-        <div class="nav-content">
-          <h1>Nurullah Patwary</h1>
+  <body class="is-preload">
+    <div id="page-wrapper">
+      <!-- Header -->
+      <header id="header">
+        <h1><a href="index.html">Nurullah Patwary</a></h1>
+        <nav id="nav">
           <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-        </div>
-      </nav>
-      <div class="hero">
-        <h2>Welcome to My Portfolio</h2>
-        <p>Software Developer & Technology Enthusiast</p>
-      </div>
-    </header>
-
-    <main>
-      <section id="about">
-        <h2>About Me</h2>
+        </nav>
+      </header>
+      <!-- About -->
+      <section id="about" class="container">
+        <header>
+          <h2>About Me</h2>
+        </header>
         <p>
           Hello! I'm a passionate software developer with a keen interest in
           creating efficient and user-friendly solutions. I love exploring new
@@ -34,65 +31,218 @@
         </p>
       </section>
 
-      <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <h3>Project 1</h3>
-            <p>Description of project 1 goes here.</p>
+      <!-- Experience -->
+      <section id="experience" class="container">
+        <header>
+          <h2>Experience</h2>
+        </header>
+        <div class="experience-card">
+          <div class="experience-header">
+            <div class="experience-left">
+              <div class="company">Agoda Services Co., Ltd.</div>
+              <div class="position">Software Engineer</div>
+            </div>
+            <div class="experience-right">
+              <div class="location">Bangkok, Thailand</div>
+              <div class="date">June 2022 - July 2023</div>
+            </div>
           </div>
-          <div class="project-card">
-            <h3>Project 2</h3>
-            <p>Description of project 2 goes here.</p>
+          <ul>
+            <li>
+              Designed and developed features for backend system of user
+              accounts to improve authentication for millions of users.
+            </li>
+            <li>
+              Investigated login breaches and rolled out 2-factor authentication
+              using A/B testing for active customers.
+            </li>
+            <li>Improved monitoring and analytics to detect login attacks.</li>
+            <li>
+              Added multi-zonal configurations in login service to prevent
+              active attacks.
+            </li>
+            <li>
+              Improved and maintained large-scale functionalities to serve
+              high-load traffic with low latency and 99.99% service uptime.
+            </li>
+          </ul>
+        </div>
+        <div class="experience-card">
+          <div class="experience-header">
+            <div class="experience-left">
+              <div class="company">Priyo Sys Ltd.</div>
+              <div class="position">Senior Software Engineer</div>
+            </div>
+            <div class="experience-right">
+              <div class="location">Dhaka, Bangladesh</div>
+              <div class="date">February 2020 - May 2022</div>
+            </div>
           </div>
-          <div class="project-card">
-            <h3>Project 3</h3>
-            <p>Description of project 3 goes here.</p>
+          <ul>
+            <li>
+              Architect of an Enterprise software project that featured data
+              inventory, complex network of data, and field-level security.
+            </li>
+            <li>
+              Engineered the infrastructure of a nationwide quiz system on AWS
+              and delivered 50M questions to 100K users concurrently.
+            </li>
+            <li>
+              Designed and built solutions for infographic features, news
+              aggregation, and graph data.
+            </li>
+          </ul>
+        </div>
+        <div class="experience-card">
+          <div class="experience-header">
+            <div class="experience-left">
+              <div class="company">iPay Systems Ltd.</div>
+              <div class="position">Software Engineer</div>
+            </div>
+            <div class="experience-right">
+              <div class="location">Dhaka, Bangladesh</div>
+              <div class="date">December 2015 - December 2019</div>
+            </div>
           </div>
+          <ul>
+            <li>
+              Designed and developed backend systems and microservices for
+              <a href="https://www.ipay.com.bd/">iPay Bangladesh</a> that served
+              large-scale wallet service.
+            </li>
+            <li>
+              Built on-premise data warehouse, data visualization, and
+              automation services for business analytics and log monitoring.
+            </li>
+            <li>
+              Engineered large-scale instant cashback service that boosted user
+              acquisition by 200X (150 to 30,000 daily signups).
+            </li>
+            <li>
+              Built automated user verification service against national ID data
+              and reduced onboarding time from hours to minutes.
+            </li>
+          </ul>
         </div>
       </section>
 
-      <section id="education">
-        <h2>Education</h2>
-        <ul>
+      <!-- Projects -->
+      <section id="projects" class="container">
+        <header>
+          <h2>Projects</h2>
+        </header>
+        <section class="feature left">
+          <a href="#" class="image icon solid fa-database"
+            ><img src="html5up-directive/images/pic01.jpg" alt=""
+          /></a>
+          <div class="content">
+            <h3>Nationwide Quiz</h3>
+            <p>
+              Designed and optimized a nationwide quiz system on AWS, preloading
+              50M questions via a data pipeline using S3, Lambda, and DynamoDB.
+              Served 100K concurrent users through a load-balanced architecture,
+              using Redis to fetch keys and DynamoDB for quick data access.
+            </p>
+          </div>
+        </section>
+        <section class="feature right">
+          <a href="#" class="image icon solid fa-id-card"
+            ><img src="html5up-directive/images/pic02.jpg" alt=""
+          /></a>
+          <div class="content">
+            <h3>User Verification Automation</h3>
+            <p>
+              Validated the photo and National ID of the user against their data
+              in the national ID database and verified users automatically in
+              the iPay user verification procedure. Technologies:
+              <a href="https://github.com/tesseract-ocr/tesseract">Tesseract</a
+              >,
+              <a href="https://github.com/ageitgey/face_recognition"
+                >Face Recognition</a
+              >, <a href="https://github.com/apache/airflow">Airflow</a>.
+            </p>
+          </div>
+        </section>
+        <section class="feature left">
+          <a href="#" class="image icon solid fa-warehouse"
+            ><img src="html5up-directive/images/pic03.jpg" alt=""
+          /></a>
+          <div class="content">
+            <h3>Data Warehouse</h3>
+            <p>
+              Built a streaming data pipeline for shipping data and logs using
+              <a href="https://github.com/confluentinc/kafka-connect-jdbc"
+                >Kafka Connect</a
+              >
+              from different data sources to a data warehouse with retention and
+              backups and deployed as a distributed platform to access and query
+              data on Elasticsearch and PostgreSQL.
+            </p>
+          </div>
+        </section>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="container">
+        <header>
+          <h2>Contact</h2>
+        </header>
+        <p>Feel free to reach out to me:</p>
+        <ul class="icons">
           <li>
-            <strong>Ph.D. in Computer Science</strong> -
             <a
-              href="https://www.uta.edu/academics/schools-colleges/engineering/academics/departments/cse"
-              target="_blank"
+              href="https://github.com/darkprince92"
+              class="icon brands fa-github"
+              ><span class="label">GitHub</span></a
             >
-              University of Texas at Arlington, Arlington, Texas
-            </a>
-            <span>(Expected graduation: May 2027)</span>
-            <br />
-            CGPA: 4.0
           </li>
           <li>
-            <strong
-              >Bachelor of Science in Computer Science and Engineering</strong
+            <a href="https://linkedin.com" class="icon brands fa-linkedin"
+              ><span class="label">LinkedIn</span></a
             >
-            -
-            <a href="https://www.buet.ac.bd/web/" target="_blank">
-              Bangladesh University of Engineering and Technology, Dhaka
-            </a>
-            <span>(Graduation: September 2015)</span>
+          </li>
+          <li>
+            <a
+              href="mailto:your.email@example.com"
+              class="icon solid fa-envelope"
+              ><span class="label">Email</span></a
+            >
           </li>
         </ul>
       </section>
 
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>Feel free to reach out to me:</p>
-        <div class="social-links">
-          <a href="https://github.com/darkprince92" target="_blank">GitHub</a>
-          <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-          <a href="mailto:your.email@example.com">Email</a>
-        </div>
-      </section>
-    </main>
+      <!-- Footer -->
+      <footer id="footer">
+        <ul class="icons">
+          <li>
+            <a href="#" class="icon brands fa-twitter"
+              ><span class="label">Twitter</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="icon brands fa-facebook-f"
+              ><span class="label">Facebook</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="icon brands fa-instagram"
+              ><span class="label">Instagram</span></a
+            >
+          </li>
+          <li>
+            <a href="#" class="icon brands fa-linkedin-in"
+              ><span class="label">LinkedIn</span></a
+            >
+          </li>
+        </ul>
+        <p>&copy; Untitled. All rights reserved.</p>
+      </footer>
+    </div>
 
-    <footer>
-      <p>&copy; 2025 Nurullah Patwary. All rights reserved.</p>
-    </footer>
+    <script src="html5up-directive/assets/js/jquery.min.js"></script>
+    <script src="html5up-directive/assets/js/browser.min.js"></script>
+    <script src="html5up-directive/assets/js/breakpoints.min.js"></script>
+    <script src="html5up-directive/assets/js/util.js"></script>
+    <script src="html5up-directive/assets/js/main.js"></script>
   </body>
 </html>
