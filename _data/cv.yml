@@ -1,0 +1,111 @@
+cv:
+  name: Mohammad Nurullah Patwary
+  label: PhD Student & Software Engineer
+  email: noor.fahim1192@gmail.com
+  location: Arlington, Texas, US
+  image: ""
+  summary: PhD student at UT Arlington researching live programming and formal methods, with 7+ years of industry experience in distributed systems and backend engineering.
+
+  social_networks:
+    - network: GitHub
+      username: darkprince92
+    - network: LinkedIn
+      username: nurullah-patwary
+
+  sections:
+    Education:
+      - institution: University of Texas at Arlington
+        location: Arlington, Texas
+        area: Computer Science
+        studyType: PhD
+        start_date: 2023-08
+        end_date: Present
+        highlights:
+          - "Expected graduation: May 2028"
+          - "CGPA: 4.0"
+
+      - institution: Bangladesh University of Engineering and Technology
+        location: Dhaka, Bangladesh
+        area: Computer Science and Engineering
+        studyType: BS
+        start_date: 2010-01
+        end_date: 2015-09
+
+    Research Experience:
+      - company: University of Texas at Arlington
+        position: Graduate Research Assistant
+        location: Arlington, Texas
+        start_date: 2024-05
+        end_date: Present
+        highlights:
+          - Live programming and interactive feedback for finite model finders.
+          - Formula completion for Alloy models.
+          - VS Code language extension for Alloy (syntax highlighting, error reporting, code completion).
+
+    Experience:
+      - company: Agoda
+        position: Software Engineer
+        location: Bangkok, Thailand
+        start_date: 2022-06
+        end_date: 2023-07
+        highlights:
+          - Engineered backend features for user account management, optimizing authentication workflows for end-users, B2B clients, and third-party integrations.
+          - Investigated login breach patterns and implemented two-factor authentication, validated through A/B testing.
+          - Enhanced monitoring and analytics pipelines to detect and mitigate login attacks.
+
+      - company: Priyo Sys Ltd.
+        position: Senior Software Engineer
+        location: Dhaka, Bangladesh
+        start_date: 2020-02
+        end_date: 2022-05
+        highlights:
+          - Designed architecture of Enterprise software with people data inventory and multi-degree network.
+          - Enhanced Django ORM for field-level access control, row-level versioning, and hierarchical permissions.
+          - Engineered nationwide quiz system on AWS delivering 50M questions to 100K concurrent users.
+
+      - company: iPay Systems Ltd.
+        position: Software Engineer
+        location: Dhaka, Bangladesh
+        start_date: 2015-12
+        end_date: 2019-12
+        highlights:
+          - Designed and developed backend systems and microservices for large-scale wallet service.
+          - Built on-premise data warehouse with Kafka streaming and event-driven analytics.
+          - Engineered instant cashback service boosting user acquisition 200X (150 to 30,000 daily signups).
+          - Built automated user verification against national ID, reducing onboarding from hours to minutes.
+
+    Skills:
+      - name: Programming Languages
+        icon: fa-solid fa-code
+        keywords: "Java, Python, Javascript"
+
+      - name: Frameworks
+        icon: fa-solid fa-layer-group
+        keywords: "Lsp4j, Spring, Django, Android"
+
+      - name: Databases
+        icon: fa-solid fa-database
+        keywords: "PostgreSQL, Cassandra, Elasticsearch, MongoDB"
+
+      - name: Tools
+        icon: fa-solid fa-wrench
+        keywords: "Apache Kafka, Redis, ELK, RabbitMQ"
+
+      - name: Infrastructure
+        icon: fa-solid fa-server
+        keywords: "AWS, Docker, Ansible, Debian"
+
+      - name: Engineering Skills
+        icon: fa-solid fa-gears
+        keywords: "Microservices, Performance optimization, Scaling, Solution Design"
+
+      - name: Core Skills
+        icon: fa-solid fa-lightbulb
+        keywords: "Problem Solving, Requirement Analysis, Team Collaboration"
+
+    Languages:
+      - name: Bengali
+        summary: "Native speaker"
+
+      - name: English
+        summary: "Professional proficiency"
