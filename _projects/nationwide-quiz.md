@@ -11,6 +11,7 @@ A scalable, serverless quiz system designed to handle nationwide concurrent user
 **Tech Stack:** AWS S3, Lambda, DynamoDB, Redis (ElastiCache), API Gateway
 
 **Key features:**
+
 - Serverless architecture using AWS Lambda for quiz logic — zero server management
 - DynamoDB for low-latency question/answer storage with on-demand capacity scaling
 - Redis (ElastiCache) for session caching and leaderboard scoring to reduce database load

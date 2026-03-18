@@ -11,6 +11,7 @@ A real-time data warehouse pipeline ingesting event streams from multiple source
 **Tech Stack:** Apache Kafka, Kafka Connect, Elasticsearch, PostgreSQL, Debezium
 
 **Key features:**
+
 - Kafka Connect source connectors to ingest data from transactional databases via Debezium CDC (Change Data Capture)
 - Sink connectors to stream data into Elasticsearch for full-text search and analytics dashboards
 - PostgreSQL as the serving layer for structured analytical queries

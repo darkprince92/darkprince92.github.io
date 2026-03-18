@@ -11,6 +11,7 @@ A flexible, business-configurable rule engine that evaluates transaction events 
 **Tech Stack:** Groovy, Apache Kafka, Java, Spring Boot
 
 **Key features:**
+
 - Domain-Specific Language (DSL) in Groovy allowing business teams to author cashback rules without engineering involvement
 - Rules are loaded dynamically at runtime — no redeployment needed when business rules change
 - Kafka event stream consumer processes transaction events as they occur for sub-second cashback determination
