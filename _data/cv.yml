@@ -106,3 +106,8 @@ cv:
 
       - name: English
         summary: "Professional proficiency"
+
+    Achievements:
+      - text: "Top 10 distinguished posters in undergraduate thesis poster presentation organized by BUET CSE department in 2015."
+      - text: "Top project in Water Hackathon App Fest Bangladesh 2014 by World Bank."
+      - text: "1st place in Database project showcase organized by BUET Computer Science and Engineering department in 2013."
