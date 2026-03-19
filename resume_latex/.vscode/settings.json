@@ -1,0 +1,8 @@
+{
+    "latex-workshop.latex.outDir": "%DIR%/out/",
+    "latex-workshop.formatting.latex": "latexindent",
+    "latex-workshop.formatting.latexindent.path": "latexindent",
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "bounded",
+    "gitdoc.enabled": true
+}
