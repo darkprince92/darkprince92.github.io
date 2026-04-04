@@ -1,0 +1,99 @@
+\documentclass{resume}
+\usepackage[left=0.5in,right=0.5in,top=0.5in,bottom=0.5in]{geometry}
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*}
+\usepackage{multicol}
+\usepackage{fontawesome}
+\newenvironment{twoitemize}{\begin{multicols}{2}\raggedright\begin{itemize}}{\end{itemize}\end{multicols}}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,filecolor=magenta,urlcolor=blue}
+\def\Plus{\texttt{+}}\def\Minus{\texttt{-}}
+
+\name{Mohammad Nurullah Patwary}
+\address{
+    \faEnvelope~noor.fahim1192@gmail.com \quad
+    \faLinkedinSquare~\href{https://www.linkedin.com/in/nurullah-patwary}{linkedin.com/in/nurullah-patwary} \quad
+    \faGithub~\href{https://github.com/darkprince92}{github.com/darkprince92}
+}
+\address{Arlington, Texas, US}
+
+\begin{document}
+
+% ===== SUMMARY =====
+\begin{rSection}{Summary}
+PhD student in Computer Science (GPA 4.0) at UT Arlington with production experience building
+large-scale backend systems, microservices, and event-driven architectures in Java and Python.
+Engineered systems serving 100K concurrent users and drove 200$\times$ user acquisition growth.
+Brings hands-on AWS, Apache Kafka, API design, and scalability expertise to DoorDash's logistics marketplace.
+\end{rSection}
+
+% ===== EXPERIENCE =====
+\begin{rSection}{Experience}
+
+\begin{rSubsection}{Agoda}{June 2022 -- July 2023}{Software Engineer}{Bangkok, Thailand}
+  \item Engineered backend authentication service for user account management, streamlining workflows
+        for millions of end-users, B2B clients, and third-party integrations on Agoda's travel platform.
+  \item Identified login breach attack vectors and shipped two-factor authentication validated via A/B
+        testing, strengthening account security across the platform's user base.
+  \item Improved monitoring and analytics pipelines using ELK Stack to detect and mitigate live login
+        attacks in real time, reducing mean time-to-detect security incidents.
+\end{rSubsection}
+
+\begin{rSubsection}{Priyo Sys Ltd.}{February 2020 -- May 2022}{Senior Software Engineer}{Dhaka, Bangladesh}
+  \item Architected Enterprise HR software with people-data inventory and multi-degree network graph,
+        deployed to enterprise clients across Bangladesh.
+  \item Extended Django ORM with field-level access control, row-level versioning, and hierarchical
+        permissions, eliminating unauthorized data access across all tenants.
+  \item Engineered nationwide quiz platform on AWS delivering 50M questions to 100K concurrent users,
+        sustaining high availability during peak traffic.
+\end{rSubsection}
+
+\begin{rSubsection}{iPay Systems Ltd.}{December 2015 -- December 2019}{Software Engineer}{Dhaka, Bangladesh}
+  \item Designed and built backend microservices for a large-scale mobile wallet service processing
+        millions of daily transactions for a national fintech platform.
+  \item Built on-premise data warehouse with Apache Kafka streaming and event-driven analytics,
+        enabling real-time fraud detection and transaction monitoring.
+  \item Engineered instant cashback service that scaled daily signups 200$\times$ (150 to 30,000),
+        driving a major user acquisition breakthrough.
+\end{rSubsection}
+
+\end{rSection}
+
+% ===== SKILLS =====
+\begin{rSection}{Skills}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{2ex}} l }
+Languages      & Java, Python, JavaScript, Kotlin \\
+Frameworks     & Spring, Django \\
+Databases      & PostgreSQL, Cassandra, Elasticsearch, MongoDB, SQL \\
+Cloud \& Infra & AWS, Docker, Apache Kafka, Redis, Ansible \\
+Tools          & Git, RabbitMQ, ELK Stack \\
+Engineering    & Microservices, API Design, Service-Oriented Architecture, Scalability, CI/CD \\
+\end{tabular}
+\end{rSection}
+
+% ===== EDUCATION =====
+\begin{rSection}{Education}
+
+\begin{rSubsection}{University of Texas at Arlington}{August 2023 -- Present}{PhD in Computer Science}{Arlington, Texas}
+  \item Expected graduation: May 2028 \quad CGPA: 4.0
+\end{rSubsection}
+
+\begin{rSubsection}{Bangladesh University of Engineering and Technology}{January 2010 -- September 2015}{BS in Computer Science and Engineering}{Dhaka, Bangladesh}
+  \item[]
+\end{rSubsection}
+
+\end{rSection}
+
+% ===== RESEARCH EXPERIENCE =====
+\begin{rSection}{Research Experience}
+
+\begin{rResearch}{University of Texas at Arlington}{May 2024 -- Present}{Graduate Research Assistant}{Arlington, Texas}
+  \item Built VS Code language extension for Alloy with syntax highlighting, error reporting, and
+        intelligent code completion, improving developer tooling for formal software modeling.
+  \item Developed live programming system providing real-time feedback for finite model finders,
+        published at FormaliSE 2025 (IEEE).
+\end{rResearch}
+
+\end{rSection}
+
+\end{document}
