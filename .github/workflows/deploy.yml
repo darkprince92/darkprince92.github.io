@@ -18,12 +18,7 @@ on:
       - "Gemfile"
       - "Gemfile.lock"
       - "!.github/workflows/axe.yml"
-      - "!.github/workflows/broken-links.yml"
-      - "!.github/workflows/deploy-docker-tag.yml"
-      - "!.github/workflows/deploy-image.yml"
-      - "!.github/workflows/docker-slim.yml"
       - "!.github/workflows/lighthouse-badger.yml"
-      - "!.github/workflows/prettier.yml"
       - "!lighthouse_results/**"
       - "!CONTRIBUTING.md"
       - "!CUSTOMIZE.md"
@@ -47,12 +42,7 @@ on:
       - "Gemfile"
       - "Gemfile.lock"
       - "!.github/workflows/axe.yml"
-      - "!.github/workflows/broken-links.yml"
-      - "!.github/workflows/deploy-docker-tag.yml"
-      - "!.github/workflows/deploy-image.yml"
-      - "!.github/workflows/docker-slim.yml"
       - "!.github/workflows/lighthouse-badger.yml"
-      - "!.github/workflows/prettier.yml"
       - "!lighthouse_results/**"
       - "!CONTRIBUTING.md"
       - "!CUSTOMIZE.md"
@@ -81,6 +71,13 @@ jobs:
         with:
           python-version: "3.13"
           cache: "pip" # caching pip dependencies
+      - name: Cache Jekyll build
+        uses: actions/cache@v4
+        with:
+          path: .jekyll-cache
+          key: jekyll-${{ runner.os }}-${{ hashFiles('Gemfile.lock', '_config.yml') }}
+          restore-keys: |
+            jekyll-${{ runner.os }}-
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:
@@ -91,13 +88,20 @@ jobs:
       - name: Install and Build 🔧
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
-          pip3 install --upgrade nbconvert
+          pip3 install nbconvert
           export JEKYLL_ENV=production
           bundle exec jekyll build
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+          cache: "npm"
+          cache-dependency-path: package-lock.json
       - name: Purge unused CSS 🧹
+        if: github.event_name != 'pull_request'
         run: |
-          npm install -g purgecss
-          purgecss -c purgecss.config.js
+          npm ci --prefer-offline
+          npx purgecss -c purgecss.config.js
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
