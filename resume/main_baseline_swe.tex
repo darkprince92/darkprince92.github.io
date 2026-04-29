@@ -1,0 +1,76 @@
+\documentclass{resume}
+\usepackage[left=0.5in,right=0.5in,top=0.5in,bottom=0.5in]{geometry}
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*}
+\usepackage{multicol}
+\usepackage{fontawesome}
+\newenvironment{twoitemize}{\begin{multicols}{2}\raggedright\begin{itemize}}{\end{itemize}\end{multicols}}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue,filecolor=magenta,urlcolor=blue}
+\def\Plus{\texttt{+}}\def\Minus{\texttt{-}}
+
+\name{Mohammad Nurullah Patwary}
+\address{
+    \faEnvelope~noor.fahim1192@gmail.com \quad
+    \faLinkedinSquare~\href{https://www.linkedin.com/in/nurullah-patwary}{linkedin.com/in/nurullah-patwary} \quad
+    \faGithub~\href{https://github.com/darkprince92}{github.com/darkprince92}
+}
+\address{Arlington, Texas, US}
+
+\begin{document}
+
+% Targeting Meta Production Engineering — leading with experience
+\begin{rSection}{Experience}
+
+\begin{rSubsection}{iPay Systems Ltd.}{December 2015 -- December 2019}{Software Engineer}{Dhaka, Bangladesh}
+  \item Built backend microservices for a large-scale mobile wallet processing millions of daily transactions.
+  \item Designed on-premise data warehouse using Apache Kafka for streaming analytics and real-time fraud detection.
+  \item Scaled instant cashback service from 150 to 30,000 daily signups (200$\times$ growth).
+  \item Automated user verification against national ID database, reducing onboarding time from hours to minutes.
+\end{rSubsection}
+
+\begin{rSubsection}{Priyo Sys Ltd.}{February 2020 -- May 2022}{Senior Software Engineer}{Dhaka, Bangladesh}
+  \item Architected enterprise HR platform with multi-degree social graph and people-data inventory.
+  \item Extended Django ORM with field-level access control and row-level versioning for multi-tenant security.
+  \item Deployed nationwide quiz platform on AWS serving 50M questions to 100K concurrent users.
+\end{rSubsection}
+
+\begin{rSubsection}{Agoda}{June 2022 -- July 2023}{Software Engineer}{Bangkok, Thailand}
+  \item Built backend authentication services for millions of users, B2B clients, and third-party integrations.
+  \item Detected and mitigated login breach attacks; shipped 2FA validated by A/B testing.
+  \item Built ELK-based monitoring and analytics pipelines for real-time security incident detection.
+\end{rSubsection}
+
+\end{rSection}
+
+\begin{rSection}{Skills}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{2ex}} l }
+Languages      & Java, Python, JavaScript \\
+Infrastructure & AWS, Linux, Docker, Ansible \\
+Data/Messaging & Apache Kafka, Redis, RabbitMQ, PostgreSQL, Cassandra, Elasticsearch \\
+Observability  & ELK Stack, log aggregation, real-time alerting \\
+Engineering    & Microservices, distributed systems, API design, CI/CD \\
+\end{tabular}
+\end{rSection}
+
+\begin{rSection}{Education}
+
+\begin{rSubsection}{University of Texas at Arlington}{August 2023 -- Present}{PhD in Computer Science}{Arlington, Texas}
+  \item Expected graduation: May 2028 \quad CGPA: 4.0
+\end{rSubsection}
+
+\begin{rSubsection}{Bangladesh University of Engineering and Technology}{January 2010 -- September 2015}{BS in Computer Science and Engineering}{Dhaka, Bangladesh}
+  \item[]
+\end{rSubsection}
+
+\end{rSection}
+
+\begin{rSection}{Research Experience}
+
+\begin{rResearch}{University of Texas at Arlington}{May 2024 -- Present}{Graduate Research Assistant}{Arlington, Texas}
+  \item Building developer tooling and live feedback systems for formal software modeling (published at FormaliSE 2025).
+\end{rResearch}
+
+\end{rSection}
+
+\end{document}

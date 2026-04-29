@@ -6,49 +6,19 @@ on:
       - master
       - main
     paths:
-      - "assets/**"
-      - "_sass/**"
-      - "_scripts/**"
-      - "**.bib"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "Gemfile"
-      - "Gemfile.lock"
+      - "site/**"
+      - "_profile/**"
       - "!.github/workflows/axe.yml"
       - "!.github/workflows/lighthouse-badger.yml"
-      - "!lighthouse_results/**"
-      - "!CONTRIBUTING.md"
-      - "!CUSTOMIZE.md"
-      - "!FAQ.md"
-      - "!INSTALL.md"
-      - "!README.md"
   pull_request:
     branches:
       - master
       - main
     paths:
-      - "assets/**"
-      - "_sass/**"
-      - "_scripts/**"
-      - "**.bib"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "Gemfile"
-      - "Gemfile.lock"
+      - "site/**"
+      - "_profile/**"
       - "!.github/workflows/axe.yml"
       - "!.github/workflows/lighthouse-badger.yml"
-      - "!lighthouse_results/**"
-      - "!CONTRIBUTING.md"
-      - "!CUSTOMIZE.md"
-      - "!FAQ.md"
-      - "!INSTALL.md"
-      - "!README.md"
   workflow_dispatch:
 
 permissions:
@@ -66,26 +36,28 @@ jobs:
         with:
           ruby-version: "3.3.5"
           bundler-cache: true
+          working-directory: site
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
         with:
           python-version: "3.13"
-          cache: "pip" # caching pip dependencies
+          cache: "pip"
       - name: Cache Jekyll build
         uses: actions/cache@v4
         with:
-          path: .jekyll-cache
-          key: jekyll-${{ runner.os }}-${{ hashFiles('Gemfile.lock', '_config.yml') }}
+          path: site/.jekyll-cache
+          key: jekyll-${{ runner.os }}-${{ hashFiles('site/Gemfile.lock', 'site/_config.yml') }}
           restore-keys: |
             jekyll-${{ runner.os }}-
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:
           commitChange: false
-          valueFile: "_config.yml"
+          valueFile: "site/_config.yml"
           propertyPath: "giscus.repo"
           value: ${{ github.repository }}
       - name: Install and Build 🔧
+        working-directory: site
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
           pip3 install nbconvert
@@ -96,9 +68,10 @@ jobs:
         with:
           node-version: "lts/*"
           cache: "npm"
-          cache-dependency-path: package-lock.json
+          cache-dependency-path: site/package-lock.json
       - name: Purge unused CSS 🧹
         if: github.event_name != 'pull_request'
+        working-directory: site
         run: |
           npm ci --prefer-offline
           npx purgecss -c purgecss.config.js
@@ -106,4 +79,4 @@ jobs:
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: _site
+          folder: site/_site

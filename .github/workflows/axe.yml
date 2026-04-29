@@ -31,23 +31,26 @@ jobs:
         with:
           ruby-version: "3.2.2"
           bundler-cache: true
+          working-directory: site
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:
           commitChange: false
-          valueFile: "_config.yml"
+          valueFile: "site/_config.yml"
           changes: |
             {
               "giscus.repo": "${{ github.repository }}",
               "baseurl": ""
             }
       - name: Install and Build 🔧
+        working-directory: site
         run: |
           sudo apt-get update && sudo apt-get install -y imagemagick
           pip3 install --upgrade jupyter
           export JEKYLL_ENV=production
           bundle exec jekyll build
       - name: Purge unused CSS 🧹
+        working-directory: site
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
@@ -70,5 +73,5 @@ jobs:
         run: |
           npm install -g @axe-core/cli
           npm install -g http-server
-          http-server _site/ &
+          http-server site/_site/ &
           axe --chromedriver-path $(npm root -g)/chromedriver/bin/chromedriver http://localhost:8080/${{ github.event.inputs.url || env.URL }} --load-delay=1500 --exit

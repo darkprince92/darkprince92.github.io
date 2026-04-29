@@ -14,15 +14,15 @@ jobs:
           python-version: "3.12"
       - name: Install RenderCV
         run: |
-          pip install -r requirements.txt
+          pip install -r site/requirements.txt
       - name: RenderCV
         run: |
-          cv_file=$(find _data  -maxdepth 1 -type f \( -name "cv.yaml" -o -name "cv.yml" \))
+          cv_file=$(find site/_data -maxdepth 1 -type f \( -name "cv.yaml" -o -name "cv.yml" \))
           if [ -z "$cv_file" ]; then
             echo "No cv.yml file found!"
             exit 1
           fi
-          rendercv_dir=$(find assets -maxdepth 1 -type d -name "rendercv")
+          rendercv_dir=$(find site/assets -maxdepth 1 -type d -name "rendercv")
           if [ -z "$rendercv_dir" ]; then
             echo "No RenderCV config directory found!"
             exit 1
@@ -33,12 +33,12 @@ jobs:
             exit 1
           fi
           rendercv render $cv_file --settings $settings
-          rm assets/rendercv/rendercv_output/*.typ
+          rm site/assets/rendercv/rendercv_output/*.typ
       - name: Upload rendercv_output as an artifact
         uses: actions/upload-artifact@v4
         with:
           name: RenderCV Output
-          path: assets/rendercv/rendercv_output
+          path: site/assets/rendercv/rendercv_output
       - name: Push the changes
         run: |
           git config --global user.name "${{ github.actor }}"

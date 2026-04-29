@@ -7,18 +7,30 @@ A simple, clean, and responsive Jekyll theme for academics.
 - **Are you a coding agent?** → Read [`.github/copilot-instructions.md`](.github/copilot-instructions.md) first (tech stack, build, CI/CD, common pitfalls & solutions)
 - **Customizing the site?** → See [`.github/agents/customize.agent.md`](.github/agents/customize.agent.md)
 - **Writing documentation?** → See [`.github/agents/docs.agent.md`](.github/agents/docs.agent.md)
-- **Need setup/deployment help?** → [INSTALL.md](INSTALL.md)
-- **Troubleshooting & FAQ?** → [TROUBLESHOOTING.md](TROUBLESHOOTING.md)
-- **Customization & theming?** → [CUSTOMIZE.md](CUSTOMIZE.md)
-- **Quick 5-min start?** → [QUICKSTART.md](QUICKSTART.md)
+- **Need setup/deployment help?** → [site/INSTALL.md](site/INSTALL.md)
+- **Troubleshooting & FAQ?** → [site/TROUBLESHOOTING.md](site/TROUBLESHOOTING.md)
+- **Customization & theming?** → [site/CUSTOMIZE.md](site/CUSTOMIZE.md)
+- **Quick 5-min start?** → [site/QUICKSTART.md](site/QUICKSTART.md)
+
+## Repository Layout
+
+```
+root/
+├── _profile/       ← source of truth for all profile/CV data
+├── site/           ← Jekyll GitHub Pages site (al-folio)
+├── resume/         ← LaTeX resume builder
+└── .github/        ← CI/CD workflows
+```
 
 ## Essential Commands
 
 ### Local Development (Docker)
 
-The recommended approach is using Docker.
+Run from the `site/` directory:
 
 ```bash
+cd site
+
 # Initial setup & start dev server
 docker compose pull && docker compose up
 # Site runs at http://localhost:8080
@@ -36,7 +48,7 @@ Before every commit, you **must** run these steps:
 
 1.  **Format Code:**
     ```bash
-    # (First time only)
+    # (First time only, from repo root)
     npm install --save-dev prettier @shopify/prettier-plugin-liquid
     # Format all files
     npx prettier . --write
@@ -44,7 +56,7 @@ Before every commit, you **must** run these steps:
 2.  **Build Locally & Verify:**
 
     ```bash
-    # Rebuild the site
+    cd site
     docker compose up --build
 
     # Verify by visiting http://localhost:8080.
@@ -53,7 +65,7 @@ Before every commit, you **must** run these steps:
 
 ## Critical Configuration
 
-When modifying `_config.yml`, these **must be updated together**:
+When modifying `site/_config.yml`, these **must be updated together**:
 
 - **Personal site:** `url: https://username.github.io` + `baseurl:` (empty)
 - **Project site:** `url: https://username.github.io` + `baseurl: /repo-name/`
@@ -64,18 +76,18 @@ When modifying `_config.yml`, these **must be updated together**:
 - **Git & Commits:** For commit message format and Git practices, see [.github/GIT_WORKFLOW.md](.github/GIT_WORKFLOW.md).
 - **Code-Specific Instructions:** Consult the relevant instruction file for your code type.
 
-| File Type                                     | Instruction File                                                                                |
-| --------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| Markdown content (`_posts/`, `_pages/`, etc.) | [markdown-content.instructions.md](.github/instructions/markdown-content.instructions.md)       |
-| YAML config (`_config.yml`, `_data/`)         | [yaml-configuration.instructions.md](.github/instructions/yaml-configuration.instructions.md)   |
-| BibTeX (`_bibliography/`)                     | [bibtex-bibliography.instructions.md](.github/instructions/bibtex-bibliography.instructions.md) |
-| Liquid templates (`_includes/`, `_layouts/`)  | [liquid-templates.instructions.md](.github/instructions/liquid-templates.instructions.md)       |
-| JavaScript (`_scripts/`)                      | [javascript-scripts.instructions.md](.github/instructions/javascript-scripts.instructions.md)   |
+| File Type                                           | Instruction File                                                                                |
+| --------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| Markdown content (`site/_posts/`, `site/_pages/`)   | [markdown-content.instructions.md](.github/instructions/markdown-content.instructions.md)       |
+| YAML config (`site/_config.yml`, `site/_data/`)     | [yaml-configuration.instructions.md](.github/instructions/yaml-configuration.instructions.md)   |
+| BibTeX (`site/_bibliography/`)                      | [bibtex-bibliography.instructions.md](.github/instructions/bibtex-bibliography.instructions.md) |
+| Liquid templates (`site/_includes/`, `site/_layouts/`) | [liquid-templates.instructions.md](.github/instructions/liquid-templates.instructions.md)    |
+| JavaScript (`site/_scripts/`)                       | [javascript-scripts.instructions.md](.github/instructions/javascript-scripts.instructions.md)   |
 
 ## Common Issues
 
 For troubleshooting, see:
 
 - [Common Pitfalls & Workarounds](.github/copilot-instructions.md#common-pitfalls--workarounds) in copilot-instructions.md
-- [TROUBLESHOOTING.md](TROUBLESHOOTING.md) for detailed solutions
+- [site/TROUBLESHOOTING.md](site/TROUBLESHOOTING.md) for detailed solutions
 - [GitHub Issues](https://github.com/alshedivat/al-folio/issues) to search for your specific problem.
