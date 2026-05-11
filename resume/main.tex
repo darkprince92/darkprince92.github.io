@@ -16,7 +16,7 @@
     \faLinkedinSquare~\href{https://www.linkedin.com/in/nurullah-patwary}{linkedin.com/in/nurullah-patwary} \quad
     \faGithub~\href{https://github.com/darkprince92}{github.com/darkprince92}
 }
-\address{Arlington, Texas, US \quad $\diamond$ \quad PhD Candidate, UT Arlington \quad $\diamond$ \quad Advisor: Dr.~Smith}
+\address{Arlington, Texas, US \quad $\diamond$ \quad PhD Candidate, UT Arlington \quad $\diamond$ \quad Advisor: Dr.~Allison Sullivan}
 
 \begin{document}
 
@@ -26,7 +26,7 @@
 \begin{rSection}{Research Interests}
 {\small
 Natural Language Processing $\cdot$ Language Models \& Prompting $\cdot$ NL-to-Formal Specification $\cdot$
-Program Synthesis from Natural Language $\cdot$ Human-AI Interaction $\cdot$ Interactive Developer Tools
+Program Synthesis from Natural Language $\cdot$ Human-AI Interaction $\cdot$ Interactive Developer Tools $\cdot$ Mutation Testing
 }
 \end{rSection}
 
@@ -37,7 +37,7 @@ Program Synthesis from Natural Language $\cdot$ Human-AI Interaction $\cdot$ Int
 
 {\bf University of Texas at Arlington}, Arlington, Texas \hfill {\em Aug 2023 -- Present} \\
 PhD in Computer Science \quad CGPA: 4.0 \quad Expected: May 2028 \\
-{\em Advisor: Dr.~Smith} \quad Research: Language-guided formal specification, NLP-assisted program synthesis
+{\em Advisor: Dr.~Allison Sullivan} \quad Research: Formal methods usability, NLP-assisted specification, live programming
 
 \smallskip
 {\bf Bangladesh University of Engineering and Technology}, Dhaka, Bangladesh \hfill {\em Jan 2010 -- Sep 2015} \\
@@ -51,12 +51,14 @@ BS in Computer Science and Engineering
 \begin{rSection}{Research Experience}
 
 \begin{rResearch}{University of Texas at Arlington}{May 2024 -- Present}{Graduate Research Assistant}{Arlington, Texas}
-  \item Designed a \textbf{live-feedback system} for finite model finders surfacing real-time diagnostics to users,
-        reducing iterative debugging cycles; published at \textbf{FormaliSE 2025} (IEEE). \href{https://doi.org/10.1109/FormaliSE66629.2025.00019}{[DOI]}
-  \item Developed \textbf{formula completion for Alloy} models via syntactic and semantic analysis to synthesize
-        partial logical specifications---analogous to transformer-based code completion for formal languages.
-  \item Built a \textbf{VS Code language server extension} (LSP) for Alloy with context-aware code completion,
-        syntax highlighting, and error reporting, improving developer experience for formal-methods practitioners.
+  \item Refined Alloy mutation operators via empirical analysis of common user errors, making mutation testing more
+        representative of real-world faults; published at \textbf{FormaliSE 2025} (IEEE/ACM).
+        \href{https://doi.org/10.1109/FormaliSE66629.2025.00019}{[DOI]}
+  \item Developed \textbf{formula completion for Alloy} using syntactic and semantic analysis to synthesize valid
+        continuations for partial logical constraints---analogous to code completion for formal specification languages;
+        under review 2025.
+  \item Built a \textbf{VS Code language server extension} (LSP) for Alloy in Java (Lsp4j), providing context-aware
+        code completion, syntax highlighting, and error reporting for formal-methods practitioners.
   \item Investigating \textbf{LLM-assisted specification generation}: prompting large language models to draft and
         repair Alloy constraints from informal natural-language requirements, bridging NLP and formal logic.
 \end{rResearch}
@@ -70,12 +72,12 @@ BS in Computer Science and Engineering
 {\small
 \begin{rBullets}
   \item Jovanovic, A.; \textbf{Patwary, M.~N.}; Sullivan, A.
-        \emph{Live Feedback for Finite Model Finding.}
-        \textbf{FormaliSE 2025} (IEEE). \href{https://doi.org/10.1109/FormaliSE66629.2025.00019}{[DOI]}
+        \emph{Refining Alloy-Based Mutation Operators to Reflect Common Mistakes.}
+        \textbf{FormaliSE 2025} (IEEE/ACM). \href{https://doi.org/10.1109/FormaliSE66629.2025.00019}{[DOI]}
   \item \textbf{Patwary, M.~N.}; Jovanovic, A.; Sullivan, A.
         \emph{A Structure Editor for Building Software Models.}
         arXiv 2024. \href{https://arxiv.org/abs/2406.09524}{[arXiv]}
-  \item \textbf{Patwary, M.~N.}; Uddin, M.; Sullivan, A.
+  \item \textbf{Patwary, M.~N.}; Uddin, I.; Sullivan, A.
         \emph{Formula Completion Suggestions for Alloy Models.}
         Under review, 2025.
 \end{rBullets}
@@ -92,25 +94,34 @@ NLP / ML       & Transformers (HuggingFace), prompt engineering, fine-tuning, te
 Languages      & Python, Java, JavaScript \\
 ML Frameworks  & PyTorch, scikit-learn, spaCy, NLTK \\
 Dev Tools      & VS Code LSP, Lsp4j, Spring, Django \\
-Infrastructure & AWS, Docker, Apache Kafka, Redis, PostgreSQL, Elasticsearch \\
+Infrastructure & AWS (S3, Lambda, DynamoDB, EC2), Docker, Apache Kafka, Redis, PostgreSQL, Elasticsearch \\
 \end{tabular}
 }
 \end{rSection}
 
 % ============================================================
-%  INDUSTRY EXPERIENCE (selected)
+%  INDUSTRY EXPERIENCE
 % ============================================================
 \begin{rSection}{Industry Experience}
 
-\begin{rSubsection}{Agoda}{Jun 2022 -- Jul 2023}{Software Engineer}{Bangkok, Thailand}
-  \item Engineered backend authentication service (global travel platform); applied statistical anomaly detection
-        on login-event streams to identify breach patterns; shipped 2FA validated via A/B testing.
-  \item Strengthened ELK-based monitoring for real-time login-attack detection and mitigation.
+\begin{rSubsection}{Agoda Services Co., Ltd.}{Jun 2022 -- Jul 2023}{Software Engineer}{Bangkok, Thailand}
+  \item Engineered backend authentication service for a global travel platform (tens of millions of daily users);
+        analyzed login-event streams to detect credential-stuffing patterns, shipped 2FA validated via A/B testing.
+  \item Strengthened ELK-based monitoring pipeline for real-time login-attack detection across segregated security zones.
+\end{rSubsection}
+
+\begin{rSubsection}{Priyo Sys Ltd.}{Feb 2020 -- May 2022}{Senior Software Engineer}{Dhaka, Bangladesh}
+  \item Architected a nationwide quiz platform on AWS (S3, Lambda, DynamoDB, Redis) supporting 100K concurrent
+        users and 50M pre-generated questions for a government-commissioned national event; ran without incident at scale.
+  \item Extended Django ORM with field-level access control and row-level versioning, enforcing hierarchical permissions
+        transparently at the data layer for an enterprise people-data inventory product.
 \end{rSubsection}
 
 \begin{rSubsection}{iPay Systems Ltd.}{Dec 2015 -- Dec 2019}{Software Engineer}{Dhaka, Bangladesh}
-  \item Built backend microservices for a national mobile-wallet processing millions of daily transactions.
-  \item Automated user verification using entity matching on national ID data, reducing onboarding from hours to minutes.
+  \item Built event-driven promotional rule engine consuming Kafka events and evaluating composable Groovy DSL rules;
+        daily sign-ups grew from 150 to 30,000 (200$\times$) driven by flexible promotional programs this engine enabled.
+  \item Automated user verification via OCR and face recognition against national ID database, reducing onboarding
+        from hours to minutes; built Kafka Connect streaming data warehouse (Elasticsearch / PostgreSQL) for analytics.
 \end{rSubsection}
 
 \end{rSection}
