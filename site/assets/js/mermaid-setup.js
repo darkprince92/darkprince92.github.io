@@ -16,6 +16,13 @@ document.addEventListener("readystatechange", () => {
       backup.after(mermaid);
     });
 
+    mermaid.registerIconPacks([
+      {
+        name: "logos",
+        loader: () => fetch("https://cdn.jsdelivr.net/npm/@iconify-json/logos@1/icons.json").then((res) => res.json()),
+      },
+    ]);
+
     mermaid.initialize({ theme: mermaidTheme });
 
     /* Zoomable mermaid diagrams */
