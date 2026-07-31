@@ -16,7 +16,7 @@ The central theme of my work is bringing live programming and AI-assisted toolin
 
 **Live feedback for Alloy (FormaliSE 2025):** I designed and built a system that provides real-time diagnostic feedback as users write Alloy models. Rather than waiting for a full model-finding run, the system surfaces counterexamples and structural feedback incrementally, reducing the iterative debugging cycle. This work was published at FormaliSE 2025 (IEEE). I collaborated with Aleksandar Jovanovic and Dr. Sullivan on this.
 
-**Formula completion for Alloy:** I developed a formula completion system for Alloy that provides intelligent suggestions while users write logical constraints. The system uses syntactic and semantic analysis to understand partially written formulas and synthesize valid completions — analogous to code completion for a formal specification language. This work is under review.
+**Formula completion for Alloy:** I developed a formula completion system for Alloy that provides intelligent suggestions while users write logical constraints. The system uses syntactic and semantic analysis to understand partially written formulas and synthesize valid completions — analogous to code completion for a formal specification language. This work is accepted at ASE 2026.
 
 **VS Code language server extension:** I built a full Language Server Protocol (LSP) extension for Alloy in VS Code using Lsp4j and Java. The extension provides context-aware code completion, syntax error highlighting, and error reporting directly in the editor. This is available as an open-source tool for Alloy users.
 
