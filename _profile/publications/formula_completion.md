@@ -2,7 +2,9 @@
 title: "Formula Completion Suggestions for Alloy Models with Selection Guidance"
 venue: "ASE 2026 (41st IEEE/ACM International Conference on Automated Software Engineering)"
 year: 2026
-status: accepted
+status: published
+doi: 10.1145/3832783.3837517
+pages: 2806-2818
 authors:
   - name: Mohammad Nurullah Patwary
     role: first
@@ -16,4 +18,4 @@ This paper presents a formula completion system for Alloy, the relational softwa
 
 The approach uses syntactic analysis to understand the structure of a partially written formula, and semantic analysis to reason about the types and relations in scope, producing ranked completion suggestions with selection guidance that steers the user toward a valid and useful formula.
 
-This is primary-authored by me (first author), in collaboration with Dr. Allison Sullivan. Accepted at ASE 2026.
+This is primary-authored by me (first author), in collaboration with Dr. Allison Sullivan. Published at ASE 2026.
