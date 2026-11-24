@@ -3,6 +3,9 @@
 \usepackage{enumitem}
 \setlist[itemize]{leftmargin=*,itemsep=0pt,topsep=0pt,parsep=0pt}
 \setlength{\parskip}{0pt}
+% parskip is 0, so the class lists must not use negative spacing or items overlap.
+\setlength{\rItemSep}{0pt}
+\setlength{\rListShift}{0pt}
 \usepackage{multicol}
 \usepackage{fontawesome}
 \newenvironment{twoitemize}{\begin{multicols}{2}\raggedright\begin{itemize}}{\end{itemize}\end{multicols}}

@@ -88,6 +88,12 @@
     \printaddress{\@addressthree}}
 }
 
+% List spacing for rSubsection, rResearch and rBullets. The negative defaults assume the
+% parskip set by the parskip package. A document that sets \parskip to 0pt must raise
+% these to 0pt, or bullet items overlap.
+\newlength{\rItemSep}\setlength{\rItemSep}{-0.5em}
+\newlength{\rListShift}\setlength{\rListShift}{-0.5em}
+
 %----------------------------------------------------------------------------------------
 %	SECTION FORMATTING
 %----------------------------------------------------------------------------------------
@@ -132,7 +138,7 @@
     {\bf #3} \hfill {\em #2} % Italic job title and location
   }\smallskip
   \begin{list}{$\bullet$}{\leftmargin=1.0em} % \cdot used for bullets, no indentation
-   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+   \itemsep\rItemSep \vspace{\rListShift} % Compress items in list together (tunable, see \rItemSep)
   }{
   \end{list}
   \vspace{0em} % Some space after the list of bullet points
@@ -155,7 +161,7 @@
     {\bf #3} \hfill {\em #2} % Italic job title and location
   }\smallskip
   \begin{list}{$\bullet$}{\leftmargin=1.0em} % \cdot used for bullets, no indentation
-   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+   \itemsep\rItemSep \vspace{\rListShift} % Compress items in list together (tunable, see \rItemSep)
   }{
   \end{list}
   \vspace{0em} % Some space after the list of bullet points
@@ -181,7 +187,7 @@
 \newenvironment{rBullets}{ % 4 input arguments - company name, year(s) employed, job title and location
  \smallskip
   \begin{list}{$\bullet$}{\leftmargin=1.0em} % \cdot used for bullets, no indentation
-   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+   \itemsep\rItemSep \vspace{\rListShift} % Compress items in list together (tunable, see \rItemSep)
   }{
   \end{list}
   \vspace{0em} % Some space after the list of bullet points
