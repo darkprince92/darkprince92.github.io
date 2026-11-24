@@ -1,17 +1,30 @@
-\documentclass{resume}
-\usepackage[left=0.45in,right=0.45in,top=0.4in,bottom=0.4in]{geometry}
+\documentclass{resume} % Use the custom resume.cls style
+
+% Use these values to configure the page margins
+\usepackage[
+    left=0.5in,
+    right=0.5in,
+    top=0.5in,
+    bottom=0.5in
+    ]{geometry} % Document margins
 \usepackage{enumitem}
-\setlist[itemize]{leftmargin=*,itemsep=0pt,topsep=0pt,parsep=0pt}
-\setlength{\parskip}{0pt}
-% parskip is 0, so the class lists must not use negative spacing or items overlap.
-\setlength{\rItemSep}{0pt}
-\setlength{\rListShift}{0pt}
+\setlist[itemize]{leftmargin=*}
 \usepackage{multicol}
 \usepackage{fontawesome}
-\newenvironment{twoitemize}{\begin{multicols}{2}\raggedright\begin{itemize}}{\end{itemize}\end{multicols}}
+\newenvironment{twoitemize}
+ {\begin{multicols}{2}\raggedright\begin{itemize}}
+ {\end{itemize}\end{multicols}}
 \usepackage{hyperref}
-\hypersetup{colorlinks=true,linkcolor=blue,filecolor=magenta,urlcolor=blue}
-\def\Plus{\texttt{+}}\def\Minus{\texttt{-}}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+}
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\def\Plus{\texttt{+}}
+\def\Minus{\texttt{-}}
 
 \name{Mohammad Nurullah Patwary}
 \address{
@@ -24,27 +37,16 @@
 \begin{document}
 
 % ============================================================
-%  RESEARCH INTERESTS
-% ============================================================
-\begin{rSection}{Research Interests}
-{\small
-Natural Language Processing $\cdot$ Language Models \& Prompting $\cdot$ NL-to-Formal Specification $\cdot$
-Program Synthesis from Natural Language $\cdot$ Human-AI Interaction $\cdot$ Interactive Developer Tools $\cdot$ Mutation Testing
-}
-\end{rSection}
-
-% ============================================================
 %  EDUCATION
 % ============================================================
 \begin{rSection}{Education}
 
-{\bf University of Texas at Arlington}, Arlington, Texas \hfill {\em Aug 2023 -- Present} \\
-PhD in Computer Science \quad CGPA: 4.0 \quad Expected: May 2028 \\
-{\em Advisor: Dr.~Allison Sullivan} \quad Research: Formal methods usability, NLP-assisted specification, live programming
+{\bf Ph.D. in Computer Science} \hfill {\em August 2023 - May 2028 (expected)}
+\\ \href{https://www.uta.edu/academics/schools-colleges/engineering/academics/departments/cse}{University of Texas at Arlington, Arlington, Texas.} \hfill {CGPA: 4.0}
+\\ {\em Advisor: Dr.~Allison Sullivan} \quad Research: Formal methods usability, NLP-assisted specification, live programming
 
-\smallskip
-{\bf Bangladesh University of Engineering and Technology}, Dhaka, Bangladesh \hfill {\em Jan 2010 -- Sep 2015} \\
-BS in Computer Science and Engineering
+{\bf Bachelor of Science in Computer Science and Engineering} \hfill {\em Graduation: September 2015}
+\\ \href{https://www.buet.ac.bd/web/}{Bangladesh University of Engineering and Technology, Dhaka}
 
 \end{rSection}
 
@@ -53,56 +55,48 @@ BS in Computer Science and Engineering
 % ============================================================
 \begin{rSection}{Research Experience}
 
-\begin{rResearch}{University of Texas at Arlington}{May 2024 -- Present}{Graduate Research Assistant}{Arlington, Texas}
-  \item Refined Alloy mutation operators via empirical analysis of common user errors, making mutation testing more
-        representative of real-world faults; published at \textbf{FormaliSE 2025} (IEEE/ACM).
-        \href{https://doi.org/10.1109/FormaliSE66629.2025.00019}{[DOI]}
-  \item Developed \textbf{formula completion for Alloy} using syntactic and semantic analysis to synthesize valid
-        continuations for partial logical constraints---analogous to code completion for formal specification languages;
-        accepted at \textbf{ASE 2026} (IEEE/ACM).
-  \item Built a \textbf{VS Code language server extension} (LSP) for Alloy in Java (Lsp4j), providing context-aware
-        code completion, syntax highlighting, and error reporting for formal-methods practitioners.
-  \item Investigating \textbf{LLM-assisted specification generation}: prompting large language models to draft and
-        repair Alloy constraints from informal natural-language requirements, bridging NLP and formal logic.
-\end{rResearch}
+    {\bf Graduate Research Assistant, University of Texas at Arlington} \hfill {\em May 2024 - Present}
+    \begin{itemize}[noitemsep]
+        \item Refined Alloy mutation operators via empirical analysis of common user errors, making mutation testing more
+              representative of real-world faults; published at \textbf{FormaliSE 2025} (IEEE/ACM).
+              \href{https://doi.org/10.1109/FormaliSE66629.2025.00019}{[DOI]}
+        \item Developed \textbf{formula completion for Alloy} using syntactic and semantic analysis to synthesize valid
+              continuations for partial logical constraints---analogous to code completion for formal specification languages;
+              accepted at \textbf{ASE 2026} (IEEE/ACM).
+        \item Built a \textbf{VS Code language server extension} (LSP) for Alloy in Java (Lsp4j), providing context-aware
+              code completion, syntax highlighting, and error reporting for formal-methods practitioners.
+        \item Investigating \textbf{LLM-assisted specification generation}: prompting large language models to draft and
+              repair Alloy constraints from informal natural-language requirements, bridging NLP and formal logic.
+    \end{itemize}
 
+\end{rSection}
+
+% ============================================================
+%  RESEARCH INTERESTS
+% ============================================================
+\begin{rSection}{Research Interests}
+    • Natural Language Processing • Language Models \& Prompting • NL-to-Formal Specification
+    • Program Synthesis from Natural Language • Human-AI Interaction • Interactive Developer Tools • Mutation Testing
 \end{rSection}
 
 % ============================================================
 %  PUBLICATIONS
 % ============================================================
 \begin{rSection}{Publications}
-{\small
-\begin{rBullets}
-  \item \textbf{Patwary, M.~N.}; Sullivan, A.
-        \emph{Towards Output Directed Debugging of Finite Model Finders.}
-        \textbf{FSE Companion 2026} (ACM). \href{https://doi.org/10.1145/3803437.3805576}{[DOI]}
-  \item Jovanovic, A.; \textbf{Patwary, M.~N.}; Sullivan, A.
-        \emph{Refining Alloy-Based Mutation Operators to Reflect Common Mistakes.}
-        \textbf{FormaliSE 2025} (IEEE/ACM). \href{https://doi.org/10.1109/FormaliSE66629.2025.00019}{[DOI]}
-  \item \textbf{Patwary, M.~N.}; Jovanovic, A.; Sullivan, A.
-        \emph{A Structure Editor for Building Software Models.}
-        arXiv 2024. \href{https://arxiv.org/abs/2406.09524}{[arXiv]}
-  \item \textbf{Patwary, M.~N.}; Sullivan, A.
-        \emph{Formula Completion Suggestions for Alloy Models with Selection Guidance.}
-        \textbf{ASE 2026} (IEEE/ACM), to appear.
-\end{rBullets}
-}
-\end{rSection}
-
-% ============================================================
-%  SKILLS
-% ============================================================
-\begin{rSection}{Skills}
-{\small
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{2ex}} l }
-NLP / ML       & Transformers (HuggingFace), prompt engineering, fine-tuning, text classification, seq2seq \\
-Languages      & Python, Java, JavaScript \\
-ML Frameworks  & PyTorch, scikit-learn, spaCy, NLTK \\
-Dev Tools      & VS Code LSP, Lsp4j, Spring, Django \\
-Infrastructure & AWS (S3, Lambda, DynamoDB, EC2), Docker, Apache Kafka, Redis, PostgreSQL, Elasticsearch \\
-\end{tabular}
-}
+  \begin{itemize}[noitemsep]
+    \item \textbf{Patwary, M.~N.}; Sullivan, A.
+          \emph{Towards Output Directed Debugging of Finite Model Finders.}
+          \textbf{FSE Companion 2026} (ACM). \href{https://doi.org/10.1145/3803437.3805576}{[DOI]}
+    \item Jovanovic, A.; \textbf{Patwary, M.~N.}; Sullivan, A.
+          \emph{Refining Alloy-Based Mutation Operators to Reflect Common Mistakes.}
+          \textbf{FormaliSE 2025} (IEEE/ACM). \href{https://doi.org/10.1109/FormaliSE66629.2025.00019}{[DOI]}
+    \item \textbf{Patwary, M.~N.}; Jovanovic, A.; Sullivan, A.
+          \emph{A Structure Editor for Building Software Models.}
+          arXiv 2024. \href{https://arxiv.org/abs/2406.09524}{[arXiv]}
+    \item \textbf{Patwary, M.~N.}; Sullivan, A.
+          \emph{Formula Completion Suggestions for Alloy Models with Selection Guidance.}
+          \textbf{ASE 2026} (IEEE/ACM), to appear.
+  \end{itemize}
 \end{rSection}
 
 % ============================================================
@@ -110,39 +104,53 @@ Infrastructure & AWS (S3, Lambda, DynamoDB, EC2), Docker, Apache Kafka, Redis, P
 % ============================================================
 \begin{rSection}{Industry Experience}
 
-\begin{rSubsection}{Agoda Services Co., Ltd.}{Jun 2022 -- Jul 2023}{Software Engineer}{Bangkok, Thailand}
-  \item Engineered backend authentication service for a global travel platform (tens of millions of daily users);
-        analyzed login-event streams to detect credential-stuffing patterns, shipped 2FA validated via A/B testing.
-  \item Strengthened ELK-based monitoring pipeline for real-time login-attack detection across segregated security zones.
-\end{rSubsection}
+    \begin{rSubsection}{Agoda Services Co., Ltd.}{June 2022 - July 2023}{Software Engineer}{Bangkok, Thailand.}
+        \item Engineered backend authentication service for a global travel platform (tens of millions of daily users);
+              analyzed login-event streams to detect credential-stuffing patterns, shipped 2FA validated via A/B testing.
+        \item Strengthened ELK-based monitoring pipeline for real-time login-attack detection across segregated security zones.
+    \end{rSubsection}
 
-\begin{rSubsection}{Priyo Sys Ltd.}{Feb 2020 -- May 2022}{Senior Software Engineer}{Dhaka, Bangladesh}
-  \item Architected a nationwide quiz platform on AWS (S3, Lambda, DynamoDB, Redis) supporting 100K concurrent
-        users and 50M pre-generated questions for a government-commissioned national event; ran without incident at scale.
-  \item Extended Django ORM with field-level access control and row-level versioning, enforcing hierarchical permissions
-        transparently at the data layer for an enterprise people-data inventory product.
-\end{rSubsection}
+    \begin{rSubsection}{Priyo Sys Ltd.}{February 2020 - May 2022}{Senior Software Engineer}{Dhaka, Bangladesh.}
+        \item Architected a nationwide quiz platform on AWS (S3, Lambda, DynamoDB, Redis) supporting 100K concurrent
+              users and 50M pre-generated questions for a government-commissioned national event; ran without incident at scale.
+        \item Extended Django ORM with field-level access control and row-level versioning, enforcing hierarchical permissions
+              transparently at the data layer for an enterprise people-data inventory product.
+    \end{rSubsection}
 
-\begin{rSubsection}{iPay Systems Ltd.}{Dec 2015 -- Dec 2019}{Software Engineer}{Dhaka, Bangladesh}
-  \item Built event-driven promotional rule engine consuming Kafka events and evaluating composable Groovy DSL rules;
-        daily sign-ups grew from 150 to 30,000 (200$\times$) driven by flexible promotional programs this engine enabled.
-  \item Automated user verification via OCR and face recognition against national ID database, reducing onboarding
-        from hours to minutes; built Kafka Connect streaming data warehouse (Elasticsearch / PostgreSQL) for analytics.
-\end{rSubsection}
+    \begin{rSubsection}{iPay Systems Ltd.}{December 2015 - December 2019}{Software Engineer}{Dhaka, Bangladesh.}
+        \item Built event-driven promotional rule engine consuming Kafka events and evaluating composable Groovy DSL rules;
+              daily sign-ups grew from 150 to 30,000 (200$\times$) driven by flexible promotional programs this engine enabled.
+        \item Automated user verification via OCR and face recognition against national ID database, reducing onboarding
+              from hours to minutes; built Kafka Connect streaming data warehouse (Elasticsearch / PostgreSQL) for analytics.
+    \end{rSubsection}
+
+\end{rSection}
+
+% ============================================================
+%  SKILLS
+% ============================================================
+\begin{rSection}{Skills}
+
+    \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+        NLP / ML \       & Transformers (HuggingFace), prompt engineering, fine-tuning, text classification, seq2seq \\
+        Languages \      & Python, Java, JavaScript                                                                  \\
+        ML Frameworks \  & PyTorch, scikit-learn, spaCy, NLTK                                                        \\
+        Dev Tools \      & VS Code LSP, Lsp4j, Spring, Django                                                        \\
+        Infrastructure \ & AWS (S3, Lambda, DynamoDB, EC2), Docker, Kafka, Redis, PostgreSQL, Elasticsearch
+    \end{tabular}
 
 \end{rSection}
 
 % ============================================================
 %  HONORS & ACHIEVEMENTS
 % ============================================================
-\begin{rSection}{Honors \& Achievements}
-{\small
-\begin{rBullets}
-  \item Top 10 distinguished poster award, undergraduate thesis presentation, BUET CSE, 2015.
-  \item Top project, Water Hackathon App Fest Bangladesh 2014 (World Bank).
-  \item 1st place, Database Project Showcase, BUET CS\&E, 2013.
-\end{rBullets}
-}
-\end{rSection}
+% Omitted to keep the resume to one page.
+% \begin{rSection}{Honors \& Achievements}
+%   \begin{itemize}[noitemsep]
+%     \item Top 10 distinguished poster award, undergraduate thesis presentation, BUET CSE, 2015.
+%     \item Top project, Water Hackathon App Fest Bangladesh 2014 (World Bank).
+%     \item 1st place, Database Project Showcase, BUET CS\&E, 2013.
+%   \end{itemize}
+% \end{rSection}
 
 \end{document}
