@@ -30,12 +30,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/experience/";
           },
-        },{id: "nav-resume",
-          title: "Resume",
-          description: "My full resume. Download the PDF above or browse the sections below.",
+        },{id: "nav-cv",
+          title: "CV",
+          description: "My full CV. Download the PDF above or browse the sections below.",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/resume/";
+            window.location.href = "/cv/";
           },
         },{id: "post-a-post-with-plotly-js",
         
