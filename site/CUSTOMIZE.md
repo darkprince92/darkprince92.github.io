@@ -346,7 +346,7 @@ Your CV can be created using one of two formats. Choose the format that works be
 
 ### Using Both Formats Simultaneously
 
-You can keep both [`_data/cv.yml`](_data/cv.yml) and [`assets/json/resume.json`](assets/json/resume.json) in your repository and switch between them on your website by setting the `cv_format` frontmatter variable in [`_pages/resume.md`](_pages/resume.md):
+You can keep both [`_data/cv.yml`](_data/cv.yml) and [`assets/json/resume.json`](assets/json/resume.json) in your repository and switch between them on your website by setting the `cv_format` frontmatter variable in [`_pages/cv.md`](_pages/cv.md):
 
 ```yaml
 ---
@@ -363,7 +363,7 @@ If you use the RenderCV format, a GitHub Actions workflow can automatically gene
 
 **To link the auto-generated PDF to your CV page:**
 
-Set the `cv_pdf` variable in the frontmatter of [`_pages/resume.md`](_pages/resume.md) to point to the generated PDF:
+Set the `cv_pdf` variable in the frontmatter of [`_pages/cv.md`](_pages/cv.md) to point to the generated PDF:
 
 ```yaml
 ---
